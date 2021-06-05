@@ -1,0 +1,11 @@
+{
+	"autoload": {
+        "files": [
+            "App/helpers.php"
+        ]
+    },
+  "require": {
+    "ext-imagick": "*",
+    "ext-json": "*"
+  }
+}

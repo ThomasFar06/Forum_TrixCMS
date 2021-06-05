@@ -1,0 +1,14 @@
+{
+    "name": "Forum",
+    "slug": "Forum_arckene__421339390",
+    "version": "1.0.9",
+    "id": "421339390",
+    "author": [
+        "Arckene"
+    ],
+    "description": "A forum Plugin for TrixCMS",
+    "aliases": "forum_arckene",
+    "providers": [
+        "Extensions\\Plugins\\Forum_arckene__421339390\\Providers\\ForumServiceProvider"
+    ]
+}
