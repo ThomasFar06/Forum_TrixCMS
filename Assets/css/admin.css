@@ -1,0 +1,222 @@
+.dd {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+    line-height: 20px
+}
+
+.dd-list {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.dd-list .dd-list {
+    padding-left: 30px
+}
+
+.dd-empty, .dd-item, .dd-placeholder {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 20px;
+    font-size: 13px;
+    line-height: 20px
+}
+
+.dd-handle:hover {
+    color: #2ea8e5;
+    background: #fff
+}
+
+.dd-item > button {
+    position: relative;
+    cursor: pointer;
+    float: left;
+    width: 25px;
+    height: 20px;
+    margin: 5px 0;
+    padding: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 0;
+    background: 0 0;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    font-weight: 700
+}
+
+.dd-item > button:before {
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    text-indent: 0
+}
+
+.dd-item > button.dd-expand:before {
+    content: '+'
+}
+
+.dd-item > button.dd-collapse:before {
+    content: '-'
+}
+
+.dd-expand {
+    display: none
+}
+
+.dd-collapsed .dd-collapse, .dd-collapsed .dd-list {
+    display: none
+}
+
+.dd-collapsed .dd-expand {
+    display: block
+}
+
+.dd-empty, .dd-placeholder {
+    margin: 5px 0;
+    padding: 0;
+    min-height: 30px;
+    background: #f2fbff;
+    border: 1px dashed #b6bcbf;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box
+}
+
+.dd-empty {
+    border: 1px dashed #bbb;
+    min-height: 100px;
+    background-color: #e5e5e5;
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px
+}
+
+.dd-dragel {
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999
+}
+
+.dd-dragel > .dd-item .dd-handle {
+    margin-top: 0
+}
+
+.dd-dragel .dd-handle {
+    box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, .1)
+}
+
+.dd-nochildren .dd-placeholder {
+    display: none
+}
+
+/**
+         * Nestable Draggable Handles
+         */
+
+.dd3-content {
+    display: block;
+    margin: 5px 0;
+    padding: 7px 10px 8px 50px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    background: #333333;
+    color: white;
+    user-select: none;
+    border-radius: 3px;
+}
+
+.dd3-handle {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    padding: 19px 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px 0 0 3px;
+    transition: all ease 0.2s;
+}
+
+.dd3-handle i {
+    padding: 0;
+    display: block;
+}
+
+
+.dd-dragel > .dd3-item > .dd3-content {
+    margin: 0;
+}
+
+.dd3-item > button {
+    margin: 16px 10px 16px 47px;
+    background: white;
+    border-radius: 3px;
+}
+
+.dd3-handle:hover {
+    color: #4e73df;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+.color-picker {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.color-picker > input.color {
+    display: block;
+    width: 111%;
+    border: none;
+    outline: none;
+    height: 54px;
+    background: 0;
+    margin: -9px;
+    cursor: pointer;
+}
+
+.color-picker > input.hex {
+    border: 0;
+    background: 0;
+    padding: 15px;
+    margin: 0;
+    position: absolute;
+    top: 3px;
+    right: 1px;
+    bottom: 3px;
+    left: 49px;
+    width: calc(100% - 52px);
+    color: #333;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    outline: 0;
+}
+
+.color-picker > input.hex.light-text {
+    color: rgba(255, 255, 255, 0.83);
+}
+
+.color-picker > input.hex.dark-text {
+    color: rgba(0, 0, 0, 0.83);
+}

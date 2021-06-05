@@ -1,0 +1,128 @@
+[data-tooltip] {
+    position: relative;
+    z-index: 10
+}
+
+[data-tooltip]:before {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 50%;
+    bottom: calc(100% + 5px);
+    pointer-events: none;
+    transition: .2s;
+    will-change: transform;
+    content: attr(data-tooltip);
+    padding: 10px 18px;
+    min-width: 50px;
+    max-width: 300px;
+    width: max-content;
+    width: -moz-max-content;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #0b0b0b;
+    box-shadow: 0 0 24px rgba(0, 0, 0, .2);
+    color: #fff;
+    text-align: center;
+    white-space: pre-wrap;
+    transform: translate(-50%, -5px) scale(.5)
+}
+
+[data-tooltip]:after {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 50%;
+    bottom: calc(100% + 5px);
+    pointer-events: none;
+    transition: .2s;
+    will-change: transform;
+    content: "";
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #0b0b0b transparent transparent transparent;
+    transition-duration: 0s;
+    transform-origin: top;
+    transform: translateX(-50%) scaleY(0)
+}
+
+[data-tooltip]:hover:before {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: .3s;
+    transform: translate(-50%, -5px) scale(1)
+}
+
+[data-tooltip]:hover:after {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: .5s;
+    transition-duration: .2s;
+    transform: translateX(-50%) scaleY(1)
+}
+
+[data-tooltip-location=left]:before {
+    left: auto;
+    right: calc(100% + 5px);
+    bottom: 50%;
+    transform: translate(-5px, 50%) scale(.5)
+}
+
+[data-tooltip-location=left]:after {
+    left: auto;
+    right: calc(100% + 5px);
+    bottom: 50%;
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent #0b0b0b;
+    transform-origin: left;
+    transform: translateY(50%) scaleX(0)
+}
+
+[data-tooltip-location=left]:hover:before {
+    transform: translate(-5px, 50%) scale(1)
+}
+
+[data-tooltip-location=left]:hover:after {
+    transform: translateY(50%) scaleX(1)
+}
+
+[data-tooltip-location=right]:before {
+    left: calc(100% + 5px);
+    bottom: 50%;
+    transform: translate(5px, 50%) scale(.5)
+}
+
+[data-tooltip-location=right]:after {
+    left: calc(100% + 5px);
+    bottom: 50%;
+    border-width: 5px 5px 5px 0;
+    border-color: transparent #0b0b0b transparent transparent;
+    transform-origin: right;
+    transform: translateY(50%) scaleX(0)
+}
+
+[data-tooltip-location=right]:hover:before {
+    transform: translate(5px, 50%) scale(1)
+}
+
+[data-tooltip-location=right]:hover:after {
+    transform: translateY(50%) scaleX(1)
+}
+
+[data-tooltip-location=bottom]:before {
+    top: calc(100% + 5px);
+    bottom: auto;
+    transform: translate(-50%, 5px) scale(.5)
+}
+
+[data-tooltip-location=bottom]:after {
+    top: calc(100% + 5px);
+    bottom: auto;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #0b0b0b transparent;
+    transform-origin: bottom
+}
+
+[data-tooltip-location=bottom]:hover:before {
+    transform: translate(-50%, 5px) scale(1)
+}
